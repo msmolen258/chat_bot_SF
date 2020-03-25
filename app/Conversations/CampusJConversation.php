@@ -63,9 +63,7 @@ class CampusJConversation extends Conversation
         } elseif ($answer->getValue() === 'campusjobwhat') {
           $this->say('---> What is campus job? <---');
           $this->say('‘Campus Jobs’ is the University’s student recruitment service for opportunities on campus.');
-          $q1 = Question::create('Vacancies are advertised on Solent Futures Online.')
-          ->addButtons([
-            Button::create('Current Campus Jobs opportunities.')->value('campusjobopport')]);
+          $this->say('All vacancies are available on Solent Futures Online.');
           }
         }
       });
