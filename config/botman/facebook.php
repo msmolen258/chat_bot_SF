@@ -56,7 +56,7 @@ return [
         'greeting' => [
             [
                 'locale' => 'default',
-                'text' => 'Hello!',
+                'text' => 'Hello! - I\'m Solent Futures Chatbot! How can I help you today?',
             ],
             [
                 'locale' => 'en_US',
