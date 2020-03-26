@@ -80,11 +80,16 @@ return [
             'composer_input_disabled' => 'true',
             'call_to_actions' => [
                 [
-                    'title' => 'My Account',
+                    'title' => 'Main menu',
                     'type' => 'nested',
                     'call_to_actions' => [
                         [
-                            'title' => 'Pay Bill',
+                            'title' => 'Campus Jobs',
+                            'type' => 'postback',
+                            'payload' => 'PAYBILL_PAYLOAD',
+                        ],
+                        [
+                            'title' => 'Part-time jobs',
                             'type' => 'postback',
                             'payload' => 'PAYBILL_PAYLOAD',
                         ],
@@ -92,8 +97,8 @@ return [
                 ],
                 [
                     'type' => 'web_url',
-                    'title' => 'Latest News',
-                    'url' => 'http://botman.io',
+                    'title' => 'Visit Solent Futures Online',
+                    'url' => 'https://idp1.solent.ac.uk/idp/profile/SAML2/Redirect/SSO;jsessionid=ph0gp6mo5xx318qu7ieye5wsb?execution=e1s1',
                     'webview_height_ratio' => 'full',
                 ],
             ],
