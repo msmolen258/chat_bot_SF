@@ -6,7 +6,7 @@ use BotMan\BotMan\BotMan;
 use Illuminate\Http\Request;
 use App\Conversations\ExampleConversation;
 use App\Conversations\CampusJConversation;
-
+use App\Conversations\Start;
 
 class BotManController extends Controller
 {
@@ -41,5 +41,11 @@ class BotManController extends Controller
     public function CampusJConversation(BotMan $bot)
     {
         $bot->startConversation(new CampusJConversation());
+    }
+
+// New conversation Start
+    public function Start (BotMan $bot)
+    {
+        $bot->startConversation(new Start());
     }
 }
