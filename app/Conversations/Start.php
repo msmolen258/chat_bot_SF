@@ -7,6 +7,7 @@ use BotMan\BotMan\Messages\Incoming\Answer;
 use BotMan\BotMan\Messages\Outgoing\Question;
 use App\Conversations\CampusJConversation;
 use App\Conversations\AboutCampusJobs;
+use App\Conversations\ApplyCampusJobs;
 use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\BotMan\Messages\Conversations\Conversation;
 use BotMan\Drivers\Facebook\Extensions\Element as Element;
@@ -41,16 +42,17 @@ class Start extends Conversation
             ->addButton(ElementButton::create('What is a campus job?')
                 ->payload('cjabout')
                 ->type('postback'))
-            ->addButton(ElementButton::create('Hours claim form')
-                ->url('https://portal.solent.ac.uk/careers/work-while-studying/resources/claim-form.pdf?t=1586368434064'))
-            ->addButton(ElementButton::create('Find campus jobs')
-                ->url('https://solentfutures.careercentre.me/u/kddij0g9')
-            ),
-            Element::create('BotMan Laravel Starter')
-             ->subtitle('CV Tips')
-             ->image('https://i.ibb.co/QdBFC8L/Kopia-Kopia-sundaes-gelato-loyalty-program-1.png')
-             ->addButton(ElementButton::create('visit')
-                 ->url('https://github.com/mpociot/botman-laravel-starter')
+            ->addButton(ElementButton::create('How to apply?')
+                ->payload('cjapply')
+                ->type('postback'))
+            ->addButton(ElementButton::create('How to get paid?')
+                ->payload('cjpayment')
+                ->type('postback')),
+          Element::create('BotMan Laravel Starter')
+            ->subtitle('CV Tips')
+            ->image('https://i.ibb.co/QdBFC8L/Kopia-Kopia-sundaes-gelato-loyalty-program-1.png')
+            ->addButton(ElementButton::create('visit')
+                ->url('https://github.com/mpociot/botman-laravel-starter')
              ),
         ]);
 
@@ -58,8 +60,8 @@ class Start extends Conversation
           if ($answer->isInteractiveMessageReply()) {
               if ($answer->getText() === 'What is a campus job?') {
                 $this->bot->startConversation(new AboutCampusJobs());
-              } else {
-                $this->say(Inspiring::quote());
+              } elseif ($answer->getText() === 'How to apply?') {
+                $this->bot->startConversation(new ApplyCampusJobs());
               }
           }
       });
