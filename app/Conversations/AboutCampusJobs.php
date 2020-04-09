@@ -34,7 +34,7 @@ class AboutCampusJobs extends Conversation
       ->addElements([
         Element::create('Solent Futures Online -> Campus Jobs')
           ->subtitle('Click the button below to view currently available campus jobs.')
-          ->addButton(ElementButton::create('Available Campus Jobs')
+          ->addButton(ElementButton::create('➡️Available Campus Jobs')
               ->url('https://solentfutures.careercentre.me/u/kddij0g9'))
         ]);
 
