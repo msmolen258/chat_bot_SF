@@ -9,6 +9,7 @@ use App\Conversations\CampusJConversation;
 use App\Conversations\AboutCampusJobs;
 use App\Conversations\ApplyCampusJobs;
 use App\Conversations\CampusJobsPayment;
+use App\Conversations\PartTimeJobswebsites;
 use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\BotMan\Messages\Conversations\Conversation;
 use BotMan\Drivers\Facebook\Extensions\Element as Element;
@@ -80,6 +81,8 @@ class Start extends Conversation
                 $this->bot->startConversation(new ApplyCampusJobs());
               } elseif ($answer->getText() === 'How to get paid?') {
                 $this->bot->startConversation(new CampusJobsPayment());
+              } elseif ($answer->getText() === 'Where to look?') {
+                $this->bot->startConversation(new PartTimeJobswebsites());
               }
           }
       });
