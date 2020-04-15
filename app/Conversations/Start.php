@@ -10,6 +10,8 @@ use App\Conversations\AboutCampusJobs;
 use App\Conversations\ApplyCampusJobs;
 use App\Conversations\CampusJobsPayment;
 use App\Conversations\PartTimeJobswebsites;
+use App\Conversations\LocalJobswebsites;
+use App\Conversations\BeforeApply;
 use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\BotMan\Messages\Conversations\Conversation;
 use BotMan\Drivers\Facebook\Extensions\Element as Element;
@@ -83,6 +85,10 @@ class Start extends Conversation
                 $this->bot->startConversation(new CampusJobsPayment());
               } elseif ($answer->getText() === 'Where to look?') {
                 $this->bot->startConversation(new PartTimeJobswebsites());
+              } elseif ($answer->getText() === 'Local jobs') {
+                $this->bot->startConversation(new LocalJobswebsites());
+              } elseif ($answer->getText() === 'Local jobs') {
+                $this->bot->startConversation(new BeforeApply());
               }
           }
       });
