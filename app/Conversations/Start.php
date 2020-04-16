@@ -13,6 +13,7 @@ use App\Conversations\PartTimeJobswebsites;
 use App\Conversations\LocalJobswebsites;
 use App\Conversations\BeforeApply;
 use App\Conversations\Howtofindus;
+use App\Conversations\CV360;
 use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\BotMan\Messages\Conversations\Conversation;
 use BotMan\Drivers\Facebook\Extensions\Element as Element;
@@ -59,12 +60,23 @@ class Start extends Conversation
             ->addButton(ElementButton::create('Where to look?')
                 ->payload('ptjsearch')
                 ->type('postback'))
-             ->addButton(ElementButton::create('Local jobs')
+            ->addButton(ElementButton::create('Local jobs')
                  ->payload('localptj')
                  ->type('postback'))
-              ->addButton(ElementButton::create('Before you apply')
+            ->addButton(ElementButton::create('Before you apply')
                   ->payload('beforeapply')
                   ->type('postback')),
+          Element::create('CV Tips')
+            ->subtitle('Everything you need to know about writing a CV.')
+            ->image('https://i.ibb.co/8Bh84P0/CV-TIPS-1.png')
+            ->addButton(ElementButton::create('CV Basics')
+                ->payload('ptjsearch')
+                ->type('postback'))
+            ->addButton(ElementButton::create('CV360')
+                ->payload('cv360')
+                ->type('postback'))
+            ->addButton(ElementButton::create('CV Examples')
+                ->url('https://www.prospects.ac.uk/careers-advice/cvs-and-cover-letters/example-cvs')),
           Element::create('Useful documents')
             ->subtitle('Find all useful documents and links in one place')
             ->image('https://i.ibb.co/ZL88TsL/DOCS.png')
@@ -73,7 +85,7 @@ class Start extends Conversation
             ->addButton(ElementButton::create('CV guide')
                 ->url('https://portal.solent.ac.uk/careers/cvadvice/resources/cv-guide.pdf'))
             ->addButton(ElementButton::create('Solent Futures Online')
-                ->url('https://solentfutures.careercentre.me/u/qdvwuzkl')),
+                ->url('https://solentfutures.careercentre.me/u/qdvwuzkl'))
         ]);
 
       return $this->bot->ask($menu, function (Answer $answer) {
@@ -90,6 +102,8 @@ class Start extends Conversation
                 $this->bot->startConversation(new LocalJobswebsites());
               } elseif ($answer->getText() === 'Before you apply') {
                 $this->bot->startConversation(new BeforeApply());
+              }elseif ($answer->getText() === 'CV360') {
+                $this->bot->startConversation(new CV360());
               }
           }
       });
