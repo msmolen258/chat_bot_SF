@@ -23,7 +23,7 @@ class ApplyCampusJobs extends Conversation
   {
     $image1 = new Image('https://i.ibb.co/WknVbnP/applycamp1.png');
     $image2 = new Image('https://i.ibb.co/PjT5ZWm/applycamp2.png');
-    $image3 = new Image('https://i.ibb.co/hDqxhPZ/applycamp3.png"');
+    $image3 = new Image('https://i.ibb.co/hDqxhPZ/applycamp3.png');
     // Step 1
     $this->bot->reply('1. Select the campus job you want to apply for, click “View”.');
 
