@@ -77,14 +77,14 @@ return [
     'persistent_menu' => [
         [
             'locale' => 'default',
-            'composer_input_disabled' => 'true',
+            'composer_input_disabled' => 'false',
             'call_to_actions' => [
                 [
                     'title' => 'Main menu',
                     'type' => 'nested',
                     'call_to_actions' => [
                         [
-                            'title' => 'Campus Jobs',
+                            'title' => 'Campus Jobss',
                             'type' => 'postback',
                             'payload' => 'PAYBILL_PAYLOAD',
                         ],
