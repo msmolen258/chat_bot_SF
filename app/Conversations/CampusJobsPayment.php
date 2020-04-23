@@ -24,7 +24,7 @@ class CampusJobsPayment extends Conversation
 
       // Step 1 : registration
       $this->bot->typesAndWaits(2);
-      $this->bot->reply(ButtonTemplate::create('Click the link below to start registration. 📢 You will not be paid until you have done this.')
+      $this->bot->reply(ButtonTemplate::create('If you\'re not registered yet, click the link below to start registration. 📢 You will not be paid until you have done this.')
         ->addButton(ElementButton::create('Online Registration: Campus Jobs')
           ->url('https://recruitment.solent.ac.uk/campus_jobs-3588.html')
         ));
