@@ -52,7 +52,6 @@ class BeforeApply extends Conversation
 
     $this->bot->typesAndWaits(1);
     $this->bot->reply('5️⃣ If you have more questions, please send us an inquiry or visit us at the information desk on week days for one-to-one advice.We are open Monday to Friday 11am-4pm.');
-    $this->bot->startConversation(new ApplyCampusJojjjbs());
 
   }
 }

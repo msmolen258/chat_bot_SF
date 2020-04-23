@@ -14,6 +14,7 @@ use App\Conversations\LocalJobswebsites;
 use App\Conversations\BeforeApply;
 use App\Conversations\Howtofindus;
 use App\Conversations\CV360;
+use App\Conversations\CvBasics;
 use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\BotMan\Messages\Conversations\Conversation;
 use BotMan\Drivers\Facebook\Extensions\Element as Element;
@@ -33,6 +34,8 @@ class Start extends Conversation
     private function welcome()
     {
       $this->bot->reply('Hi!👋 I\'m Solent Futures Bot and I\'m here to help you!');
+      $this->bot->typesAndWaits(1);
+      $this->bot->reply('Select the topic from the menu below ⬇️ or type your enquiry 🖊️.');
       $this->addMenu();
     }
 
@@ -70,7 +73,7 @@ class Start extends Conversation
             ->subtitle('Everything you need to know about writing a CV.')
             ->image('https://i.ibb.co/8Bh84P0/CV-TIPS-1.png')
             ->addButton(ElementButton::create('CV Basics')
-                ->payload('ptjsearch')
+                ->payload('cvbasics')
                 ->type('postback'))
             ->addButton(ElementButton::create('CV360')
                 ->payload('cv360')
@@ -104,6 +107,8 @@ class Start extends Conversation
                 $this->bot->startConversation(new BeforeApply());
               }elseif ($answer->getText() === 'CV360') {
                 $this->bot->startConversation(new CV360());
+              }elseif ($answer->getText() === 'CV Basics') {
+                $this->bot->startConversation(new CvBasics());
               }
           }
       });

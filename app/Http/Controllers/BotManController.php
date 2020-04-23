@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 use App\Conversations\ExampleConversation;
 use App\Conversations\CampusJConversation;
 use App\Conversations\Start;
+use App\Conversations\AboutCampusJobs;
+use App\Conversations\CV360;
+use App\Conversations\CampusJobsPayment;
+use App\Conversations\ApplyCampusJobs;
+use App\Conversations\PartTimeJobswebsites;
+use App\Conversations\CvBasics;
+use App\Conversations\BookAppointment;
 
 class BotManController extends Controller
 {
@@ -48,4 +55,39 @@ class BotManController extends Controller
     {
         $bot->startConversation(new Start());
     }
+
+    public function AboutCampusConversation (BotMan $bot)
+    {
+      $bot->startConversation(new AboutCampusJobs());
+    }
+
+
+    public function CV360Conversation (BotMan $bot)
+    {
+      $bot->startConversation(new CV360());
+    }
+
+    public function CampusRegConversation (BotMan $bot)
+    {
+      $bot->startConversation(new CampusJobsPayment());
+    }
+
+    public function CampusApplyConversation (BotMan $bot)
+    {
+      $bot->startConversation(new ApplyCampusJobs());
+    }
+
+    public function CVBasicsConversation (BotMan $bot)
+    {
+      $bot->startConversation(new CvBasics());
+    }
+
+    public function BookAppointmentConversation (BotMan $bot)
+    {
+      $bot->startConversation(new BookAppointment());
+    }
+
+
+
+
 }

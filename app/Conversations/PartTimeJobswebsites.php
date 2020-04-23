@@ -14,7 +14,7 @@ use BotMan\Drivers\Facebook\Extensions\ListTemplate as ListTemplate;
 use BotMan\Drivers\Facebook\Extensions\MediaTemplate as MediaTemplate;
 use BotMan\BotMan\Messages\Outgoing\OutgoingMessage;
 use BotMan\BotMan\Messages\Attachments\Image;
-
+use App\Conversations\LocalJobswebsites;
 
 class PartTimeJobswebsites extends Conversation
 {
@@ -25,7 +25,7 @@ class PartTimeJobswebsites extends Conversation
     $this->explainparttimejobs();
   }
 
-  public function explainparttimejobs ()
+  public function explainparttimejsobs ()
   {
 
     $image1 = new Image('https://i.ibb.co/TkhNbpB/jobpref.png');
@@ -68,6 +68,6 @@ class PartTimeJobswebsites extends Conversation
       ->url('https://www.totaljobs.com/')
       )
     );
-}
+  }
 
 }
