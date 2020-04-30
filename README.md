@@ -1,10 +1,18 @@
 # Solent Futures Chatbot
 
-One Paragraph of project description goes here
+Solent Futures Chatbot is part of my Final Major Project. It is created to ultimately support the activities of the career service at Solent University. Chatbot should answer the most frequently asked students' questions.
 
 ## Getting Started
+If you want to run this project on your local machine:
+1. Download and unzip the project repository.
+2. Go into the directory where you saved the project and use the following command, to start a simple PHP server:
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+```
+php artisan serve
+
+```
+
+3. Next, you can visit the URL and click on the Tinker link or on the Chat widget in the bottom right corner.
 
 ### Prerequisites
 
