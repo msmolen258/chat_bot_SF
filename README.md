@@ -1,6 +1,6 @@
 # Solent Futures Chatbot
 
-![alt text](https://i.ibb.co/kXT5phH/Copy-of-Handdrawn-Circle-Logo-2.png)
+![alt text](https://i.ibb.co/H78b0GW/SF-bot.png)
 
 Solent Futures Chatbot is part of my Final Major Project. It is created to ultimately support the activities of the career service at Solent University. Chatbot should answer the most frequently asked students' questions.
 
