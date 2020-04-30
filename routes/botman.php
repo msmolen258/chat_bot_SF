@@ -14,6 +14,9 @@ $dialogflow = Dialogflow::create('b19418a92d6e42deb5c3a9b7ea46f323')->listenForA
 
 $botman->middleware->received($dialogflow);
 
+// Start
+$botman->hears('Start|GET_STARTED', BotManController::class.'@Start');
+
 //DIALOGFLOW Conversations
 
 $botman->hears('campuswhat', BotManController::class.'@AboutCampusConversation')->middleware($dialogflow);
@@ -28,7 +31,7 @@ $botman->hears('bookappoint', BotManController::class.'@BookAppointmentConversat
 
 // Other Conversations
 $botman->hears('Start conversation', BotManController::class.'@startConversation');
-$botman->hears('Start|GET_STARTED', BotManController::class.'@Start');
+
 $botman->hears('Campus', BotManController::class.'@CampusJConversation');
 
 $botman->hears('Test', function ($bot) {
