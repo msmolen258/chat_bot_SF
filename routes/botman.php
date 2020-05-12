@@ -14,10 +14,17 @@ $dialogflow = Dialogflow::create('b19418a92d6e42deb5c3a9b7ea46f323')->listenForA
 
 $botman->middleware->received($dialogflow);
 
+// welcome
+//$botman->hears('input.welcome', function ($bot) {
+//    $bot->reply('Hi! How can I help you today?');
+//})->middleware($dialogflow);;
+
+$botman->hears('input.welcome', BotManController::class.'@Start')->middleware($dialogflow);
+
 // Start
 $botman->hears('Start|GET_STARTED', BotManController::class.'@Start');
 
-//DIALOGFLOW Conversations
+//DIALOGFLOW intents -  Conversations
 
 $botman->hears('campuswhat', BotManController::class.'@AboutCampusConversation')->middleware($dialogflow);
 $botman->hears('cv360info', BotManController::class.'@CV360Conversation')->middleware($dialogflow);
@@ -28,20 +35,7 @@ $botman->hears('cvbasics', BotManController::class.'@CVBasicsConversation')->mid
 $botman->hears('bookappoint', BotManController::class.'@BookAppointmentConversation')->middleware($dialogflow);
 
 
-
-// Other Conversations
-$botman->hears('Start conversation', BotManController::class.'@startConversation');
-
-$botman->hears('Campus', BotManController::class.'@CampusJConversation');
-
-$botman->hears('Test', function ($bot) {
-  $bot->reply(ButtonTemplate::create('Do you want to know more about BotMan?')
-	->addButton(ElementButton::create('Tell me more')
-	    ->type('postback')
-	    ->payload('tellmemore')
-	)
-	->addButton(ElementButton::create('Show me the docs')
-	    ->url('http://botman.io/')
-	)
-  );
+/// Fallback
+$botman->fallback(function($bot) {
+    $bot->reply('I\'m sorry, I\'m just a bot. I don\'t always understand what you are asking. If you have an important question, write us an email: 📨solent.futures@solent.ac.uk or visit us at the Solent Futures Center (RM001). ⌚ Monday-Friday 11am-4pm.');
 });
