@@ -14,8 +14,6 @@
       mainColor: '#91c8ed',
       bubbleBackground: '#91c8ed',
       bubbleAvatarUrl: 'https://i.ibb.co/Wz8dHDS/Copy-of-Handdrawn-Circle-Logo-1.png',
-      desktopHeight: '650',
-      desktopWidth: '670',
       aboutText: 'Created by MS',
       aboutLink: 'https://github.com/msmolen258/chat_bot_SF'
 
@@ -23,7 +21,7 @@
     };
 
     </script>
-    
+
 
     <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
     <!-- Fonts -->

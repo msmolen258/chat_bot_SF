@@ -21,11 +21,16 @@ $botman->middleware->received($dialogflow);
 
 $botman->hears('input.welcome', BotManController::class.'@Start')->middleware($dialogflow);
 
+
+// Main menu
+$botman->hears('Open Main menu', BotManController::class.'@Start')->middleware($dialogflow);
+
+
 // Start
-$botman->hears('Start|GET_STARTED', BotManController::class.'@Start');
+$botman->hears('GET_STARTED', BotManController::class.'@Start');
 
 //DIALOGFLOW intents -  Conversations
-
+$botman->hears('beforeapply', BotManController::class.'@BeforeApplyConversation')->middleware($dialogflow);
 $botman->hears('campuswhat', BotManController::class.'@AboutCampusConversation')->middleware($dialogflow);
 $botman->hears('cv360info', BotManController::class.'@CV360Conversation')->middleware($dialogflow);
 $botman->hears('campusjobreg', BotManController::class.'@CampusRegConversation')->middleware($dialogflow);
@@ -33,8 +38,8 @@ $botman->hears('applycj', BotManController::class.'@CampusApplyConversation')->m
 $botman->hears('ptjobswebsite', BotManController::class.'@PartTimejobsConv')->middleware($dialogflow);
 $botman->hears('cvbasics', BotManController::class.'@CVBasicsConversation')->middleware($dialogflow);
 $botman->hears('bookappoint', BotManController::class.'@BookAppointmentConversation')->middleware($dialogflow);
-
-
+$botman->hears('cvsections', BotManController::class.'@CVSectionsConversation')->middleware($dialogflow);
+$botman->hears('localjobs', BotManController::class.'@LocalJobsConversation')->middleware($dialogflow);
 /// Fallback
 $botman->fallback(function($bot) {
     $bot->reply('I\'m sorry, I\'m just a bot. I don\'t always understand what you are asking. If you have an important question, write us an email: 📨solent.futures@solent.ac.uk or visit us at the Solent Futures Center (RM001). ⌚ Monday-Friday 11am-4pm.');

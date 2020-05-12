@@ -27,7 +27,7 @@ class BookAppointment extends Conversation
         ->url('https://learn.solent.ac.uk/mod/feedback/view.php?id=1274421')
       ));
 
-    $this->bot->reply('Are you prospective student or Solent graduate? Please email 📧 careers@solent.ac.uk. ');  
+    $this->bot->reply('Are you prospective student or Solent graduate? Please email 📧 careers@solent.ac.uk. ');
 
 
 

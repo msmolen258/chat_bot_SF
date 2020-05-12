@@ -84,9 +84,9 @@ return [
                     'type' => 'nested',
                     'call_to_actions' => [
                         [
-                            'title' => 'Campus Jobss',
+                            'title' => 'Open Main Menu',
                             'type' => 'postback',
-                            'payload' => 'PAYBILL_PAYLOAD',
+                            'payload' => 'Open Main Menu',
                         ],
                         [
                             'title' => 'Part-time jobs',

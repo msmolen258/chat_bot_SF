@@ -25,7 +25,7 @@ class PartTimeJobswebsites extends Conversation
     $this->explainparttimejobs();
   }
 
-  public function explainparttimejsobs ()
+  public function explainparttimejobs ()
   {
 
     $image1 = new Image('https://i.ibb.co/TkhNbpB/jobpref.png');
@@ -68,6 +68,12 @@ class PartTimeJobswebsites extends Conversation
       ->url('https://www.totaljobs.com/')
       )
     );
+
+    $this->bot->reply(ButtonTemplate::create('Do you want to find part-time job locally?')
+      ->addButton(ElementButton::create('Local jobs')
+          ->payload('localjobs')
+          ->type('postback'))
+      );
   }
 
 }

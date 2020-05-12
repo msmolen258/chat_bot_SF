@@ -5,23 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>BotMan Studio</title>
+    <title>Solent Futures Bot</title>
 
     <script>
 
     var botmanWidget = {
-
       title: 'Solent Futures Bot',
       introMessage: 'Hi! 👋 I\'m Solent Futures Bot. How can I help you today? Please type your enquiry below.✍️',
       mainColor: '#91c8ed',
       bubbleBackground: '#91c8ed',
       bubbleAvatarUrl: 'https://i.ibb.co/Wz8dHDS/Copy-of-Handdrawn-Circle-Logo-1.png',
-      desktopHeight: '650',
-      desktopWidth: '670',
       aboutText: 'Created by MS',
-      aboutLink: 'https://github.com/msmolen258/chat_bot_SF'
-
-
+      aboutLink: 'https://github.com/msmolen258/chat_bot_SF',
     };
 
     </script>

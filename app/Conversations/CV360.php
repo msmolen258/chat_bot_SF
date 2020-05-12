@@ -22,10 +22,6 @@ class CV360 extends Conversation
 
     public function run()
     {
-      $image1 = new Image('https://i.ibb.co/j8fnZV2/cv360-1.png');
-      $message1 = OutgoingMessage::create()
-        ->withAttachment($image1);
-      $this->bot->reply($message1);
 
       $this->bot->typesAndWaits(2);
       $this->bot->reply('✅ CV360 scores your CV against more than 50 checks that commonly trip up an ATS, annoy a hiring manager or get your CV deprioritised.');

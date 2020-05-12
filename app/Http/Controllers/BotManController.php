@@ -14,6 +14,10 @@ use App\Conversations\ApplyCampusJobs;
 use App\Conversations\PartTimeJobswebsites;
 use App\Conversations\CvBasics;
 use App\Conversations\BookAppointment;
+use App\Conversations\BeforeApply;
+use App\Conversations\CVSections;
+use App\Conversations\LocalJobswebsites;
+
 
 class BotManController extends Controller
 {
@@ -86,6 +90,27 @@ class BotManController extends Controller
     {
       $bot->startConversation(new BookAppointment());
     }
+
+    public function PartTimejobsConv (BotMan $bot)
+    {
+      $bot->startConversation(new PartTimeJobswebsites());
+    }
+
+    public function BeforeApplyConversation (BotMan $bot)
+    {
+      $bot->startConversation(new BeforeApply());
+    }
+
+    public function CVSectionsConversation (BotMan $bot)
+    {
+      $bot->startConversation(new CVSections());
+    }
+
+    public function LocalJobsConversation (BotMan $bot)
+    {
+      $bot->startConversation(new LocalJobswebsites());
+    }
+
 
 
 
