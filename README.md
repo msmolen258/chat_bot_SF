@@ -17,14 +17,11 @@ php artisan serve
 
 3. Next, you can visit the URL and click on the Tinker link or on the Chat widget in the bottom right corner.
 
+#Alternativly
+
 ### Prerequisites
 
 PHP >= 7.1.3
-
-
-## Running the tests
-
-Explain how to run the automated tests for this system
 
 
 ## Deployment

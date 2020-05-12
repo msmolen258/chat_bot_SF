@@ -7,6 +7,25 @@
 
     <title>BotMan Studio</title>
 
+    <script>
+
+    var botmanWidget = {
+
+      title: 'Solent Futures Bot',
+      introMessage: 'Hi! 👋 I\'m Solent Futures Bot. How can I help you today? Please type your enquiry below.✍️',
+      mainColor: '#91c8ed',
+      bubbleBackground: '#91c8ed',
+      bubbleAvatarUrl: 'https://i.ibb.co/Wz8dHDS/Copy-of-Handdrawn-Circle-Logo-1.png',
+      desktopHeight: '650',
+      desktopWidth: '670',
+      aboutText: 'Created by MS',
+      aboutLink: 'https://github.com/msmolen258/chat_bot_SF'
+
+
+    };
+
+    </script>
+
     <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
 
     <!-- Fonts -->
@@ -18,7 +37,7 @@
             font-family: "Source Sans Pro", sans-serif;
             margin: 0;
             padding: 0;
-            background: radial-gradient(#57bfc7, #45a6b3);
+            background: radial-gradient(#e1ebea, #45a6b3);
         }
 
         .container {
