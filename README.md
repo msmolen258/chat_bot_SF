@@ -21,10 +21,16 @@ php artisan serve
 
 3. Next, you can visit the URL and click on the Tinker link or on the Chat widget in the bottom right corner. IMPORTANT: I recommend to use widget since it's more like chat Messenger.
 
-# Alternativly (Facebook Messanger)
+## Alternativly (Facebook Messenger)
 
 1. To link your BotMan with Facebook Messenger, you first need to follow the official quick start guide to create your Facebook Messenger application and retrieve an access token as well as an app secret.
 2. Update both of them with the dummy values in your BotMan .env file.
+
+```
+FACEBOOK_TOKEN= xxx
+FACEBOOK_VERIFICATION= xxx
+```
+
 3. Next you can setup the webhook, which connects the Facebook application with your BotMan application.
 
 
