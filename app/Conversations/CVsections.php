@@ -17,7 +17,7 @@ use BotMan\BotMan\Messages\Outgoing\OutgoingMessage;
 use BotMan\BotMan\Messages\Attachments\Image;
 
 
-class CVSections extends Conversation
+class CVsections extends Conversation
 {
 
   public function run ()

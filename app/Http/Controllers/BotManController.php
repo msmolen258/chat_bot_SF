@@ -15,7 +15,7 @@ use App\Conversations\PartTimeJobswebsites;
 use App\Conversations\CvBasics;
 use App\Conversations\BookAppointment;
 use App\Conversations\BeforeApply;
-use App\Conversations\CVSections;
+use App\Conversations\CVsections;
 use App\Conversations\LocalJobswebsites;
 
 
@@ -103,7 +103,7 @@ class BotManController extends Controller
 
     public function CVSectionsConversation (BotMan $bot)
     {
-      $bot->startConversation(new CVSections());
+      $bot->startConversation(new CVsections());
     }
 
     public function LocalJobsConversation (BotMan $bot)
