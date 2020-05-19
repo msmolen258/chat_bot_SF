@@ -31,7 +31,7 @@ class CVSections extends Conversation
       )
     );
 
-    $this->bot->typesAndWaits(1);
+
     $this->bot->reply(ButtonTemplate::create('2. Personal Profile: a short, summary of your CV. No longer than 5 lines!')
       ->addButton(ElementButton::create('✔️DOs & ❌DON\'Ts')
         ->url('https://solentfutures.careercentre.me/u/ttinhsfc'))
@@ -40,21 +40,21 @@ class CVSections extends Conversation
       )
     );
 
-    $this->bot->typesAndWaits(1);
+
     $this->bot->reply(ButtonTemplate::create('3. Key Skills: Key Skills: use 2-4 bullet points and reinforce each one with an explanation of how you developed or used the skill. ')
       ->addButton(ElementButton::create('📋 More tips')
         ->url('https://solentfutures.careercentre.me/u/kt867zm8')
       )
     );
 
-    $this->bot->typesAndWaits(1);
+
     $this->bot->reply(ButtonTemplate::create('4. Work Experience: for each job, state: company name / job title / dates/ what have you learned / achievements.')
       ->addButton(ElementButton::create('📋 More tips')
         ->url('https://solentfutures.careercentre.me/u/mhfc3ip3')
       )
     );
 
-    $this->bot->typesAndWaits(1);
+
     $this->bot->reply(ButtonTemplate::create('5. Education and Qualifications: state your latest qualification first; summarise the oldest results.')
       ->addButton(ElementButton::create('📋 More tips')
         ->url('https://solentfutures.careercentre.me/u/w6ujesbf')));
