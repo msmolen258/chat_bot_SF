@@ -89,9 +89,9 @@ return [
                             'payload' => 'Open Main Menu',
                         ],
                         [
-                            'title' => 'Part-time jobs',
+                            'title' => 'Book appointment',
                             'type' => 'postback',
-                            'payload' => 'PAYBILL_PAYLOAD',
+                            'payload' => 'Book appointment',
                         ],
                     ],
                 ],

@@ -30,14 +30,14 @@ class ApplyCampusJobs extends Conversation
     $message1 = OutgoingMessage::create()
       ->withAttachment($image1);
     $this->bot->reply($message1);
-    $this->bot->typesAndWaits(1);
+
 
     // Step 2
     $this->bot->reply('2. Then click "-> Apply"');
     $message2 = OutgoingMessage::create()
       ->withAttachment($image2);
     $this->bot->reply($message2);
-    $this->bot->typesAndWaits(1);
+
 
 
     //Step 3
@@ -47,7 +47,7 @@ class ApplyCampusJobs extends Conversation
     $this->bot->reply($message3);
 
     // Reminder about SFO
-    $this->bot->typesAndWaits(1);
+
     $this->bot->reply(ButtonTemplate::create('Remember, all opportunities are avalible on Solent Futures Online.')
       ->addButton(ElementButton::create('Browse campus jobs')
         ->url('https://solentfutures.careercentre.me/u/2er27sjg')

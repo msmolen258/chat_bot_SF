@@ -35,7 +35,7 @@ class Start extends Conversation
     {
       $this->bot->reply('Hi!👋 I\'m Solent Futures Bot and I\'m here to help you!');
       $this->bot->typesAndWaits(1);
-      $this->bot->reply('Select the topic from the menu below ⬇️ or type your enquiry 🖊️.');
+      $this->bot->reply('Select the topic from the menu below ⬇️ or type your enquiry 🖊️');
       $this->addMenu();
     }
 
@@ -112,5 +112,6 @@ class Start extends Conversation
               }
           }
       });
+
     }
 }

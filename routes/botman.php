@@ -42,5 +42,5 @@ $botman->hears('cvsections', BotManController::class.'@CVSectionsConversation')-
 $botman->hears('localjobs', BotManController::class.'@LocalJobsConversation')->middleware($dialogflow);
 /// Fallback
 $botman->fallback(function($bot) {
-    $bot->reply('I\'m sorry, I\'m just a bot. I don\'t always understand what you are asking. If you have an important question, write us an email: 📨solent.futures@solent.ac.uk or visit us at the Solent Futures Center (RM001). ⌚ Monday-Friday 11am-4pm.');
+    $bot->reply('I\'m sorry, I\'m just a bot. I don\'t always understand what you are asking. If you have an important question, please send us an email: 📨solent.futures@solent.ac.uk or visit the Solent Futures Centre (RM001). ⌚ Monday-Friday 11am-4pm.');
 });
